@@ -1,0 +1,120 @@
+<div class="main">
+    <div class="left">
+        <ul class="accordion" data-accordion>
+            <li class="accordion-navigation" style="border-style:solid;border-radius:10px;">
+                <a style="background-color:beige;">地图风格</a>
+                <div class="content active" style="display:block !important;">
+                    <div class="panel callout" style="width: 100%;">
+                        效果一
+                    </div>
+                    <div class="panel callout" style="width: 100%;">
+                        效果二
+                    </div>
+                </div>
+            </li>
+            <li class="accordion-navigation" style="border-style:solid;border-radius:10px;">
+                <a style="background-color:beige;">地图缩放</a>
+                <div class="content active" style="display:block !important;">
+                    <span id="mySlider" style="font-size:20px;color: grey;"></span>
+                    <div class="range-slider radius" data-slider style="width: 100%;"
+                        data-options="initial: 0;display_selector: #mySlider;">
+                        <span class="range-slider-handle"></span>
+                        <span class="range-slider-active-segment"></span>
+                    </div>
+                </div>
+            </li>
+            <li class="accordion-navigation" style="border-style:solid;border-radius:10px;">
+                <a style="background-color:beige;">内置数据集</a>
+                <div class="content active" style="display:block !important;">
+                    <p style="height: 20px;">
+                        数据集：
+                        <button type="button" class="button" data-reveal-id="myDataset"
+                            style="border-radius:5px; width:40%;height: auto;">
+                            当前数据集
+                        </button>
+                    </p>
+                    <div id="myDataset" class="reveal-modal " data-reveal
+                        style="margin: auto;height: 80%;overflow-y: scroll;">
+                        <h2>数据如下</h2>
+                        <p>data</p>
+                        <p>data</p>
+                        <a class="close-reveal-modal">&times;</a>
+                    </div>
+                    <button type="button" class="button" data-reveal-id="selectDataset"
+                        style="font-size:20px;margin:20px auto;border-radius:5px; width:100%;height: auto;background-color: gainsboro;">
+                        选择数据集
+                    </button>
+                    <div id="selectDataset" class="reveal-modal " data-reveal
+                        style="margin: auto;height: 80%;overflow-y: scroll;">
+                        <table style="height: 100%;width: 100%;">
+                            <thead>
+                                <tr>
+                                    <th>Firstname</th>
+                                    <th>Lastname</th>
+                                    <th>Email</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>John</td>
+                                    <td>Doe</td>
+                                    <td>[email protected]</td>
+                                </tr>
+                                <tr>
+                                    <td>Mary</td>
+                                    <td>Moe</td>
+                                    <td>[email protected]</td>
+                                </tr>
+                                <tr>
+                                    <td>July</td>
+                                    <td>Dooley</td>
+                                    <td>[email protected]</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <a class="close-reveal-modal">&times;</a>
+                    </div>
+                    <p>
+                        #Rows:&nbsp;
+                        <span id="rows"></span>
+                    </p>
+                    <p>
+                        #Columns:&nbsp;
+                        <span id="columns"></span>
+                    </p>
+                    
+                </div>
+            </li>
+            <li class="accordion-navigation" style="border-style:solid;border-radius:10px;">
+                <a style="background-color:beige;">选择对应属性</a>
+                <div class="content active" style="display:block !important;">
+                    <button type="button" class="button" style="width: 100%;height: 30px;border-radius: 5px;font-size: 20px;" (click)="DrawMap()">开始渲染</button>
+                </div>
+            </li>
+            <li class="accordion-navigation" style="border-style:solid;border-radius:10px;">
+                <a style="background-color:beige;">上传文件</a>
+                <div class="content active" style="display:block !important;">
+                    <label for="exampleFileUpload" class="button" style="border-radius: 5px;width: 100%;height: 30px;font-size: 20px;">Upload File</label>
+                    <input type="file" id="exampleFileUpload" class="show-for-sr" (change)="handleFileSelect($event)">
+                </div>
+            </li>
+        </ul>
+    </div>
+    <div class="center">
+        <div class="content">
+            <div id="map" style="height: 100%;"></div>
+        </div>
+        <div class="footer">
+            <div class="footer_left">
+                <div id="map1" style="height: 100%;"></div>
+            </div>
+            <div class="footer_center">
+                <div id="map2" style="height: 100%;"></div>
+            </div>
+            <div class="footer_right">
+                <div id="map3" style="height: 100%;"></div>
+            </div>
+        </div>
+    </div>
+    <div class="right">右</div>
+</div>

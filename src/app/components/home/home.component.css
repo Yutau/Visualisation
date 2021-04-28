@@ -1,0 +1,67 @@
+*{
+    margin: 2px;
+    padding: 0;
+}
+
+.main {
+    display: flex;
+    position: absolute;
+    height:100%;
+    width: 100%;
+    overflow-x: hidden;
+    overflow-y: scroll;
+}
+.left{
+    width: 20%;
+    height: 100%;
+    background-color: white;
+    overflow-y: scroll;
+}
+.center{
+    height:100%;
+    width: 60%;
+    word-break: break-word;
+    display: flex;
+    flex-direction: column;
+}
+.right{
+    background-color: bisque;
+    height:100%;
+    width: 20%;
+    overflow-y: scroll;
+}
+
+.left .map_style{
+    position: absolute;
+    margin-top: 10px;
+    border-style: inset;
+}
+
+.center .content{
+    flex: 1;
+    text-align: center;
+}
+
+.center .footer{
+    height: 30%;
+    display: flex;
+}
+
+.center .footer .footer_left{
+    width: 33%;
+    height: 100%;
+}
+
+.center .footer .footer_center{
+    height:100%;
+    width: 33%;
+}
+
+.center .footer .footer_right{
+    height:100%;
+    width: 34%;
+}
+
+.accordion-navigation{
+    margin: 10px auto;
+}
